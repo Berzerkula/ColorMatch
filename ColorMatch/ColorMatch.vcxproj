@@ -187,6 +187,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ColorMatch.h" />
+    <ClInclude Include="ColorMatchBoard.h" />
     <ClInclude Include="ColorMatchDoc.h" />
     <ClInclude Include="ColorMatchView.h" />
     <ClInclude Include="MainFrm.h" />
@@ -196,6 +197,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ColorMatch.cpp" />
+    <ClCompile Include="ColorMatchBoard.cpp" />
     <ClCompile Include="ColorMatchDoc.cpp" />
     <ClCompile Include="ColorMatchView.cpp" />
     <ClCompile Include="MainFrm.cpp" />

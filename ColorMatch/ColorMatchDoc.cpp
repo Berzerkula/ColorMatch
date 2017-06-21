@@ -42,6 +42,9 @@ BOOL CColorMatchDoc::OnNewDocument()
 	if (!CDocument::OnNewDocument())
 		return FALSE;
 
+	//  Set (or reset) the game board
+	m_board.SetupBoard();
+
 	// TODO: add reinitialization code here
 	// (SDI documents will reuse this document)
 

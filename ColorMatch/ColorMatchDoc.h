@@ -5,6 +5,7 @@
 
 #pragma once
 
+#include "ColorMatchBoard.h"
 
 class CColorMatchDoc : public CDocument
 {
@@ -17,6 +18,18 @@ public:
 
 // Operations
 public:
+
+	/*  Functions for accessing the game board */
+	COLORREF GetBoardSpace(int row, int col)
+	{
+		return m_board.GetBoardSpace(row, col);
+	}
+	void SetupBoard(void) { m_board.SetupBoard(); }
+	int GetWidth(void) { return m_board.GetWidth(); }
+	int GetHeight(void) { return m_board.GetHeight(); }
+	int GetColumns(void) { return m_board.GetColumns(); }
+	int GetRows(void) { return m_board.GetRows(); }
+	void DeleteBoard(void) { m_board.DeleteBoard(); }
 
 // Overrides
 public:
@@ -36,6 +49,9 @@ public:
 #endif
 
 protected:
+
+	/*  Instance of the game board */
+	CColorMatchBoard m_board;
 
 // Generated message map functions
 protected:

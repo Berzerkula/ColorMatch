@@ -26,7 +26,7 @@ CColorMatchBoard::CColorMatchBoard(const CColorMatchBoard& board)
 	m_nWidth = board.m_nWidth;
 	m_nRemaining = board.m_nRemaining;
 	m_nColors = board.m_nColors;
-	// Copy ove the colors for the board
+	// Copy over the colors for the board
 	for (int i = 0; i < 8; i++)
 		m_arrColors[i] = board.m_arrColors[i];
 	m_arrBoard = NULL;

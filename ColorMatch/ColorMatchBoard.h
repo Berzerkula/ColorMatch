@@ -28,10 +28,6 @@ public:
 	{ m_nRows = (nRows >= 5) ? nRows : 5; }
 	/*  Function to delete the board and free memory */
 	void DeleteBoard(void);
-
-	/* Number of Colors */
-	int m_nColors;
-
 	/*  Is the game over? */
 	bool CColorMatchBoard::IsGameOver(void) const;
 	/*  Get the number of blocks remaining */
@@ -74,4 +70,6 @@ private:
 	int m_nWidth;
 	/*  Number of blocks remaining */
 	int m_nRemaining;
+	/* Number of Colors */
+	int m_nColors;
 };

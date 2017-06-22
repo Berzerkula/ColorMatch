@@ -22,9 +22,7 @@ public:
 
 	/*  Functions for accessing the game board */
 	COLORREF GetBoardSpace(int row, int col)
-	{
-		return m_board.GetBoardSpace(row, col);
-	}
+	{ return m_board.GetBoardSpace(row, col); }
 	void SetupBoard(void) { m_board.SetupBoard(); }
 	int GetWidth(void) { return m_board.GetWidth(); }
 	void SetWidth(int nWidth) { m_board.SetWidth(nWidth); }

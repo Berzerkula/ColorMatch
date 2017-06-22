@@ -350,12 +350,30 @@ void CColorMatchView::OnSetupBlocksize()
 
 void CColorMatchView::OnEditRedo()
 {
-	// TODO: Add your command handler code here
+	//  First get a pointer to the document
+	CColorMatchDoc* pDoc = GetDocument();
+	ASSERT_VALID(pDoc);
+	if (!pDoc)
+		return;
+	//  Call redo on the document
+	pDoc->RedoLast();
+	//  Force the view to redraw
+	Invalidate();
+	UpdateWindow();
 }
 
 void CColorMatchView::OnEditUndo()
 {
-	// TODO: Add your command handler code here
+	//  First get a pointer to the document
+	CColorMatchDoc* pDoc = GetDocument();
+	ASSERT_VALID(pDoc);
+	if (!pDoc)
+		return;
+	//  Call undo on the document
+	pDoc->UndoLast();
+	//  Force the view to redraw
+	Invalidate();
+	UpdateWindow();
 }
 
 void CColorMatchView::OnUpdateEditRedo(CCmdUI *pCmdUI)

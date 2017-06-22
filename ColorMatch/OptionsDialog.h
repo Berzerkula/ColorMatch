@@ -9,7 +9,7 @@ class COptionsDialog : public CDialog
 	DECLARE_DYNAMIC(COptionsDialog)
 
 public:
-	COptionsDialog(CWnd* pParent = NULL);   // standard constructor
+	COptionsDialog(bool bRowColumn, CWnd* pParent = NULL);   // standard constructor
 	virtual ~COptionsDialog();
 
 // Dialog Data
@@ -28,4 +28,8 @@ public:
 	int m_nValue2;
 	afx_msg void OnBnClickedButtonDefaults();
 	virtual BOOL OnInitDialog();
+private:
+	/* Is this dialog for row/column (true)
+	or width/height (false? */
+	bool m_bRowColumnDialog;
 };

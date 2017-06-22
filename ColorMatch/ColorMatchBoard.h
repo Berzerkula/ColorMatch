@@ -58,7 +58,7 @@ private:
 	/*  2D array pointer */
 	int** m_arrBoard;
 	/*  List of colors, 0 is background and 1-7 are piece colors */
-	COLORREF m_arrColors[8];
+	static COLORREF m_arrColors[8];
 	/*  Board size information */
 	int m_nColumns;
 	int m_nRows;

@@ -6,6 +6,7 @@
 #pragma once
 
 #include "ColorMatchBoard.h"
+#include <stack>
 
 class CColorMatchDoc : public CDocument
 {

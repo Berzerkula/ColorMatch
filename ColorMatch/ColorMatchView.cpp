@@ -378,10 +378,22 @@ void CColorMatchView::OnEditUndo()
 
 void CColorMatchView::OnUpdateEditRedo(CCmdUI *pCmdUI)
 {
-	// TODO: Add your command update UI handler code here
+	//  First get a pointer to the document
+	CColorMatchDoc* pDoc = GetDocument();
+	ASSERT_VALID(pDoc);
+	if (!pDoc)
+		return;
+	//  Enable option if it is available
+	pCmdUI->Enable(pDoc->CanRedo());
 }
 
 void CColorMatchView::OnUpdateEditUndo(CCmdUI *pCmdUI)
 {
-	// TODO: Add your command update UI handler code here
+	//  First get a pointer to the document
+	CColorMatchDoc* pDoc = GetDocument();
+	ASSERT_VALID(pDoc);
+	if (!pDoc)
+		return;
+	//  Enable option if it is available
+	pCmdUI->Enable(pDoc->CanUndo());
 }

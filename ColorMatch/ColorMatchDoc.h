@@ -37,14 +37,9 @@ public:
 	void DeleteBoard(void) { m_board.DeleteBoard(); }
 	bool IsGameOver() { return m_board.IsGameOver(); }
 	int DeleteBlocks(int row, int col)
-	{
-		return m_board.DeleteBlocks(row, col);
-	}
+	{ return m_board.DeleteBlocks(row, col); }
 	int GetRemainingCount()
-	{
-		return m_board.GetRemainingCount();
-	}
-
+	{ return m_board.GetRemainingCount(); }
 	int GetNumColors() { return m_board.GetNumColors(); }
 	void SetNumColors(int nColors);
 

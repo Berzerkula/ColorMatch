@@ -45,3 +45,14 @@ void COptionsDialog::OnBnClickedButtonDefaults()
 {
 	// TODO: Add your control notification handler code here
 }
+
+
+BOOL COptionsDialog::OnInitDialog()
+{
+	CDialog::OnInitDialog();
+
+	// TODO:  Add extra initialization here
+
+	return TRUE;  // return TRUE unless you set the focus to a control
+				  // EXCEPTION: OCX Property Pages should return FALSE
+}

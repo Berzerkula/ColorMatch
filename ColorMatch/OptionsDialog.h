@@ -27,4 +27,5 @@ public:
 	int m_nValue1;
 	int m_nValue2;
 	afx_msg void OnBnClickedButtonDefaults();
+	virtual BOOL OnInitDialog();
 };

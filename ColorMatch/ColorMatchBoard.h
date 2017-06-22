@@ -51,10 +51,10 @@ private:
 	};
 
 	/*  Recursive helper function for deleting blocks */
-	int CColorMatchBoard::DeleteNeighborBlocks(int row, int col, int color,
+	int DeleteNeighborBlocks(int row, int col, int color,
 		Direction direction);
 	/*  Function to compact the board after blocks are eliminated */
-	void CColorMatchBoard::CompactBoard(void);
+	void CompactBoard(void);
 	/*  2D array pointer */
 	int** m_arrBoard;
 	/*  List of colors, 0 is background and 1-7 are piece colors */

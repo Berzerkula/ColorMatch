@@ -11,10 +11,11 @@
 
 IMPLEMENT_DYNAMIC(COptionsDialog, CDialog)
 
-COptionsDialog::COptionsDialog(CWnd* pParent /*=NULL*/)
+COptionsDialog::COptionsDialog(bool bRowColumn, CWnd* pParent /*=NULL*/)
 	: CDialog(IDD_DIALOG_OPTIONS, pParent)
 	, m_nValue1(0)
 	, m_nValue2(0)
+	, m_bRowColumnDialog(bRowColumn)
 {
 
 }

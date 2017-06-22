@@ -1,4 +1,5 @@
 #pragma once
+#include "afxwin.h"
 
 
 // COptionsDialog dialog
@@ -20,4 +21,10 @@ protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
 
 	DECLARE_MESSAGE_MAP()
+public:
+	CStatic m_ctrlStaticText1;
+	CStatic m_ctrlStaticText2;
+	int m_nValue1;
+	int m_nValue2;
+	afx_msg void OnBnClickedButtonDefaults();
 };

@@ -39,6 +39,11 @@ public:
 	{ return m_board.GetRemainingCount(); }
 	int GetNumColors() { return m_board.GetNumColors(); }
 	void SetNumColors(int nColors);
+	/* Undo/Redo functions */
+	void UndoLast();
+	bool CanUndo();
+	void RedoLast();
+	bool CanRedo();
 
 // Overrides
 public:

@@ -150,7 +150,7 @@ void CColorMatchView::ResizeWindow()
 void CColorMatchView::OnLButtonDown(UINT nFlags, CPoint point)
 {
 	//  First get a pointer to the document
-	CSameGameDoc* pDoc = GetDocument();
+	CColorMatchDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
 	if (!pDoc)
 		return;

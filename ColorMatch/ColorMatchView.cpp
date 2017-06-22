@@ -318,5 +318,27 @@ void CColorMatchView::OnSetupBlockcount()
 
 void CColorMatchView::OnSetupBlocksize()
 {
-	// TODO: Add your command handler code here
+	//  First get a pointer to the document
+	CColorMatchDoc* pDoc = GetDocument();
+	ASSERT_VALID(pDoc);
+	if (!pDoc)
+		return;
+	//  Create the options dialog
+	COptionsDialog dlg(false, this);
+	//  Set the width and height values
+	dlg.m_nValue1 = pDoc->GetWidth();
+	dlg.m_nValue2 = pDoc->GetHeight();
+	//  Display the dialog
+	if (dlg.DoModal() == IDOK)
+	{
+		//  First delete the board
+		pDoc->DeleteBoard();
+		//  Get the user selected values
+		pDoc->SetWidth(dlg.m_nValue1);
+		pDoc->SetHeight(dlg.m_nValue2);
+		//  Update the board
+		pDoc->SetupBoard();
+		//  Resize the view
+		ResizeWindow();
+	}
 }

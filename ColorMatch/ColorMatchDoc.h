@@ -66,9 +66,15 @@ public:
 #endif
 
 protected:
-
+	/*  Functions to clear undo/redo stacks */
+	void ClearUndo();
+	void ClearRedo();
 	/*  Instance of the game board */
 	CColorMatchBoard m_board;
+	/*  Undo stack */
+	std::stack<CColorMatchBoard*> m_undo;
+	/*  Redo stack */
+	std::stack<CColorMatchBoard*> m_redo;
 
 // Generated message map functions
 protected:

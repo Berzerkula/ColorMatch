@@ -194,27 +194,72 @@ void CColorMatchView::OnLButtonDown(UINT nFlags, CPoint point)
 
 void CColorMatchView::OnLevel3colors()
 {
-	// TODO: Add your command handler code here
+	//  First get a pointer to the document
+	CColorMatchDoc* pDoc = GetDocument();
+	ASSERT_VALID(pDoc);
+	if (!pDoc)
+		return;
+	//  Set the number of colors
+	pDoc->SetNumColors(3);
+	//  Force the view to redraw
+	Invalidate();
+	UpdateWindow();
 }
 
 void CColorMatchView::OnLevel4colors()
 {
-	// TODO: Add your command handler code here
+	//  First get a pointer to the document
+	CColorMatchDoc* pDoc = GetDocument();
+	ASSERT_VALID(pDoc);
+	if (!pDoc)
+		return;
+	//  Set the number of colors
+	pDoc->SetNumColors(4);
+	//  Force the view to redraw
+	Invalidate();
+	UpdateWindow();
 }
 
 void CColorMatchView::OnLevel5colors()
 {
-	// TODO: Add your command handler code here
+	//  First get a pointer to the document
+	CColorMatchDoc* pDoc = GetDocument();
+	ASSERT_VALID(pDoc);
+	if (!pDoc)
+		return;
+	//  Set the number of colors
+	pDoc->SetNumColors(5);
+	//  Force the view to redraw
+	Invalidate();
+	UpdateWindow();
 }
 
 void CColorMatchView::OnLevel6colors()
 {
-	// TODO: Add your command handler code here
+	//  First get a pointer to the document
+	CColorMatchDoc* pDoc = GetDocument();
+	ASSERT_VALID(pDoc);
+	if (!pDoc)
+		return;
+	//  Set the number of colors
+	pDoc->SetNumColors(6);
+	//  Force the view to redraw
+	Invalidate();
+	UpdateWindow();
 }
 
 void CColorMatchView::OnLevel7colors()
 {
-	// TODO: Add your command handler code here
+	//  First get a pointer to the document
+	CColorMatchDoc* pDoc = GetDocument();
+	ASSERT_VALID(pDoc);
+	if (!pDoc)
+		return;
+	//  Set the number of colors
+	pDoc->SetNumColors(7);
+	//  Force the view to redraw
+	Invalidate();
+	UpdateWindow();
 }
 
 void CColorMatchView::OnUpdateLevel3colors(CCmdUI *pCmdUI)

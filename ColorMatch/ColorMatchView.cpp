@@ -232,25 +232,55 @@ void CColorMatchView::OnLevel7colors()
 
 void CColorMatchView::OnUpdateLevel3colors(CCmdUI *pCmdUI)
 {
-	// TODO: Add your command update UI handler code here
+	//  First get a pointer to the document
+	CColorMatchDoc* pDoc = GetDocument();
+	ASSERT_VALID(pDoc);
+	if (!pDoc)
+		return;
+	//  Set the check if this is the right level
+	pCmdUI->SetCheck(pDoc->GetNumColors() == 3);
 }
 
 void CColorMatchView::OnUpdateLevel4colors(CCmdUI *pCmdUI)
 {
-	// TODO: Add your command update UI handler code here
+	//  First get a pointer to the document
+	CColorMatchDoc* pDoc = GetDocument();
+	ASSERT_VALID(pDoc);
+	if (!pDoc)
+		return;
+	//  Set the check if this is the right level
+	pCmdUI->SetCheck(pDoc->GetNumColors() == 4);
 }
 
 void CColorMatchView::OnUpdateLevel5colors(CCmdUI *pCmdUI)
 {
-	// TODO: Add your command update UI handler code here
+	//  First get a pointer to the document
+	CColorMatchDoc* pDoc = GetDocument();
+	ASSERT_VALID(pDoc);
+	if (!pDoc)
+		return;
+	//  Set the check if this is the right level
+	pCmdUI->SetCheck(pDoc->GetNumColors() == 5);
 }
 
 void CColorMatchView::OnUpdateLevel6colors(CCmdUI *pCmdUI)
 {
-	// TODO: Add your command update UI handler code here
+	//  First get a pointer to the document
+	CColorMatchDoc* pDoc = GetDocument();
+	ASSERT_VALID(pDoc);
+	if (!pDoc)
+		return;
+	//  Set the check if this is the right level
+	pCmdUI->SetCheck(pDoc->GetNumColors() == 6);
 }
 
 void CColorMatchView::OnUpdateLevel7colors(CCmdUI *pCmdUI)
 {
-	// TODO: Add your command update UI handler code here
+	//  First get a pointer to the document
+	CColorMatchDoc* pDoc = GetDocument();
+	ASSERT_VALID(pDoc);
+	if (!pDoc)
+		return;
+	//  Set the check if this is the right level
+	pCmdUI->SetCheck(pDoc->GetNumColors() == 7);
 }

@@ -17,6 +17,7 @@ CColorMatchBoard::CColorMatchBoard(void)
 	m_arrColors[5] = RGB(0, 255, 255);
 	m_arrColors[6] = RGB(255, 0, 128);
 	m_arrColors[7] = RGB(0, 64, 0);
+	// Create and setup the board
 	SetupBoard();
 }
 

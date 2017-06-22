@@ -37,4 +37,6 @@ private:
 	int m_nRows;
 	int m_nHeight;
 	int m_nWidth;
+	/*  Number of blocks remaining */
+	int m_nRemaining;
 };

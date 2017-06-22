@@ -28,6 +28,7 @@ protected:
 public:
 
 	void ResizeWindow();
+	void setColorCount(int numColors);
 
 	virtual ~CColorMatchView();
 #ifdef _DEBUG

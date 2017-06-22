@@ -22,7 +22,7 @@ public:
 
 	/*  Functions for accessing the game board */
 	COLORREF GetBoardSpace(int row, int col)
-	{ return m_board.GetBoardSpace(row, col); }
+	{ return m_board->GetBoardSpace(row, col); }
 	void SetupBoard(void) { m_board.SetupBoard(); }
 	int GetWidth(void) { return m_board.GetWidth(); }
 	void SetWidth(int nWidth) { m_board.SetWidth(nWidth); }
@@ -34,8 +34,7 @@ public:
 	void SetRows(int nRows) { m_board.SetRows(nRows); }
 	void DeleteBoard(void) { m_board.DeleteBoard(); }
 	bool IsGameOver() { return m_board.IsGameOver(); }
-	int DeleteBlocks(int row, int col)
-	{ return m_board.DeleteBlocks(row, col); }
+	int DeleteBlocks(int row, int col);
 	int GetRemainingCount()
 	{ return m_board.GetRemainingCount(); }
 	int GetNumColors() { return m_board.GetNumColors(); }

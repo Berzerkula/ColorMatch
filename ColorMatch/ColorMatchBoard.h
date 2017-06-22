@@ -29,7 +29,7 @@ public:
 	/*  Function to delete the board and free memory */
 	void DeleteBoard(void);
 	/*  Is the game over? */
-	bool CColorMatchBoard::IsGameOver(void) const;
+	bool IsGameOver(void) const;
 	/*  Get the number of blocks remaining */
 	int GetRemainingCount(void) const { return m_nRemaining; }
 	/*  Function to delete all adjacent blocks */

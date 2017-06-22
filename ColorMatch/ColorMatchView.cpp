@@ -197,22 +197,9 @@ void CColorMatchView::OnLevel3colors()
 	// TODO: Add your command handler code here
 }
 
-
-void CColorMatchView::OnUpdateLevel3colors(CCmdUI *pCmdUI)
-{
-	// TODO: Add your command update UI handler code here
-}
-
-
 void CColorMatchView::OnLevel4colors()
 {
 	// TODO: Add your command handler code here
-}
-
-
-void CColorMatchView::OnUpdateLevel4colors(CCmdUI *pCmdUI)
-{
-	// TODO: Add your command update UI handler code here
 }
 
 void CColorMatchView::OnLevel5colors()
@@ -220,22 +207,9 @@ void CColorMatchView::OnLevel5colors()
 	// TODO: Add your command handler code here
 }
 
-
-void CColorMatchView::OnUpdateLevel5colors(CCmdUI *pCmdUI)
-{
-	// TODO: Add your command update UI handler code here
-}
-
-
 void CColorMatchView::OnLevel6colors()
 {
 	// TODO: Add your command handler code here
-}
-
-
-void CColorMatchView::OnUpdateLevel6colors(CCmdUI *pCmdUI)
-{
-	// TODO: Add your command update UI handler code here
 }
 
 void CColorMatchView::OnLevel7colors()
@@ -243,6 +217,25 @@ void CColorMatchView::OnLevel7colors()
 	// TODO: Add your command handler code here
 }
 
+void CColorMatchView::OnUpdateLevel3colors(CCmdUI *pCmdUI)
+{
+	// TODO: Add your command update UI handler code here
+}
+
+void CColorMatchView::OnUpdateLevel4colors(CCmdUI *pCmdUI)
+{
+	// TODO: Add your command update UI handler code here
+}
+
+void CColorMatchView::OnUpdateLevel5colors(CCmdUI *pCmdUI)
+{
+	// TODO: Add your command update UI handler code here
+}
+
+void CColorMatchView::OnUpdateLevel6colors(CCmdUI *pCmdUI)
+{
+	// TODO: Add your command update UI handler code here
+}
 
 void CColorMatchView::OnUpdateLevel7colors(CCmdUI *pCmdUI)
 {

@@ -28,6 +28,19 @@ public:
 private:
 	/*  Function to create the board and allocate memory */
 	void CreateBoard(void);
+	/*  Direction enumeration for deleting blocks */
+	enum Direction
+	{
+		DIRECTION_UP,
+		DIRECTION_DOWN,
+		DIRECTION_LEFT,
+		DIRECTION_RIGHT
+	};
+	/*  Recursive helper function for deleting blocks */
+	int DeleteNeighborBlocks(int row, int col, int color,
+		Direction direction);
+	/*  Function to compact the board after blocks are eliminated */
+	void CompactBoard(void);
 	/*  2D array pointer */
 	int** m_arrBoard;
 	/*  List of colors, 0 is background and 1-3 are piece colors */

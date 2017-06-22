@@ -19,6 +19,9 @@ public:
 	/*  Function to delete the board and free memory */
 	void DeleteBoard(void);
 
+	/* Number of Colors */
+	int m_nColors;
+
 	/*  Is the game over? */
 	bool CColorMatchBoard::IsGameOver(void) const
 	{

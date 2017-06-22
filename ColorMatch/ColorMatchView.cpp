@@ -353,18 +353,15 @@ void CColorMatchView::OnEditRedo()
 	// TODO: Add your command handler code here
 }
 
-
-void CColorMatchView::OnUpdateEditRedo(CCmdUI *pCmdUI)
-{
-	// TODO: Add your command update UI handler code here
-}
-
-
 void CColorMatchView::OnEditUndo()
 {
 	// TODO: Add your command handler code here
 }
 
+void CColorMatchView::OnUpdateEditRedo(CCmdUI *pCmdUI)
+{
+	// TODO: Add your command update UI handler code here
+}
 
 void CColorMatchView::OnUpdateEditUndo(CCmdUI *pCmdUI)
 {

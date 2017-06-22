@@ -44,7 +44,13 @@ END_MESSAGE_MAP()
 
 void COptionsDialog::OnBnClickedButtonDefaults()
 {
-	// TODO: Add your control notification handler code here
+	//  Do things differently for the different dialogs
+	if (m_bRowColumnDialog)
+		m_nValue1 = m_nValue2 = 15; //  15x15 board
+	else
+		m_nValue1 = m_nValue2 = 35; //  35x35 blocks
+									//  Have the controls updated to the new values
+	UpdateData(false);
 }
 
 

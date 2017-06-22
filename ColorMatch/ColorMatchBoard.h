@@ -18,6 +18,16 @@ public:
 	int GetRows(void) const { return m_nRows; }
 	/*  Function to delete the board and free memory */
 	void DeleteBoard(void);
+	bool IsGameOver() { return m_board.IsGameOver(); }
+	int DeleteBlocks(int row, int col)
+	{
+		return m_board.DeleteBlocks(row, col);
+	}
+	int GetRemainingCount()
+	{
+		return m_board.GetRemainingCount();
+	}
+
 private:
 	/*  Function to create the board and allocate memory */
 	void CreateBoard(void);

@@ -52,4 +52,46 @@ private:
 	int m_nWidth;
 	/*  Number of blocks remaining */
 	int m_nRemaining;
+
+	int CColorMatchBoard::DeleteBlocks(int row, int col)
+	{
+		//  Make sure that the row and column are valid
+		if (row < 0 || row >= m_nRows || col < 0 || col >= m_nColumns)
+			return -1;
+		//  Can't delete background blocks
+		int nColor = m_arrBoard[row][col];
+		if (nColor == 0)
+			return -1;
+		//	First check if there are any of the adjacent sides
+		//  with the same color
+		int nCount = -1;
+		if ((row - 1 >= 0 && m_arrBoard[row - 1][col] == nColor) ||
+			(row + 1 < m_nRows && m_arrBoard[row + 1][col] == nColor) ||
+			(col - 1 >= 0 && m_arrBoard[row][col - 1] == nColor) ||
+			(col + 1 < m_nColumns && m_arrBoard[row][col + 1] == nColor))
+		{
+			//  Then call the recursive function to eliminate all 
+			//  other touching blocks with same color
+			m_arrBoard[row][col] = 0;
+			nCount = 1;
+			//  Recursive call for up
+			nCount +=
+				DeleteNeighborBlocks(row - 1, col, nColor, DIRECTION_DOWN);
+			//  Recursive call for down
+			nCount +=
+				DeleteNeighborBlocks(row + 1, col, nColor, DIRECTION_UP);
+			//  Recursive call for left
+			nCount +=
+				DeleteNeighborBlocks(row, col - 1, nColor, DIRECTION_RIGHT);
+			//  Recursive call for right
+			nCount +=
+				DeleteNeighborBlocks(row, col + 1, nColor, DIRECTION_LEFT);
+			//  Finally compact the board
+			CompactBoard();
+			//  Remove the count from the number remaining
+			m_nRemaining -= nCount;
+		}
+		//  Return the total number of pieces deleted
+		return nCount;
+	}
 };

@@ -31,7 +31,7 @@ void CColorMatchBoard::SetupBoard(void)
 	//  Randomly set each square to a color
 	for (int row = 0; row < m_nRows; row++)
 		for (int col = 0; col < m_nColumns; col++)
-			m_arrBoard[row][col] = (rand() % 3) + 1;
+			m_arrBoard[row][col] = (rand() % m_nColors) + 1;
 	//  Set the number of spaces remaining
 	m_nRemaining = m_nRows * m_nColumns;
 }

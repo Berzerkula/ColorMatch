@@ -22,6 +22,7 @@
 IMPLEMENT_DYNCREATE(CColorMatchView, CView)
 
 BEGIN_MESSAGE_MAP(CColorMatchView, CView)
+	ON_WM_LBUTTONDOWN()
 END_MESSAGE_MAP()
 
 // CColorMatchView construction/destruction
@@ -144,4 +145,11 @@ void CColorMatchView::ResizeWindow()
 		pDoc->GetHeight() * pDoc->GetRows() + nHeightDiff;
 	//  The MoveWindow function resizes the frame window
 	GetParentFrame()->MoveWindow(&rcWindow);
+}
+
+void CColorMatchView::OnLButtonDown(UINT nFlags, CPoint point)
+{
+	// TODO: Add your message handler code here and/or call default
+
+	CView::OnLButtonDown(nFlags, point);
 }

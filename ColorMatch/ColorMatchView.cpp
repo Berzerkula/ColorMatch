@@ -11,6 +11,7 @@
 
 #include "ColorMatchDoc.h"
 #include "ColorMatchView.h"
+#include "OptionsDialog.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW

@@ -18,7 +18,13 @@ public:
 	int GetRows(void) const { return m_nRows; }
 	/*  Function to delete the board and free memory */
 	void DeleteBoard(void);
-	
+	/*  Is the game over? */
+	bool IsGameOver(void) const;
+	/*  Get the number of blocks remaining */
+	int GetRemainingCount(void) const { return m_nRemaining; }
+	/*  Function to delete all adjacent blocks */
+	int DeleteBlocks(int row, int col);
+
 private:
 	/*  Function to create the board and allocate memory */
 	void CreateBoard(void);

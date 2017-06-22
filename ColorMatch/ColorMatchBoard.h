@@ -94,4 +94,35 @@ private:
 		//  Return the total number of pieces deleted
 		return nCount;
 	}
+
+	int CColorMatchBoard::DeleteNeighborBlocks(int row, int col, int color,
+		Direction direction)
+	{
+		//  Check if it is on the board
+		if (row < 0 || row >= m_nRows || col < 0 || col >= m_nColumns)
+			return 0;
+		//  Check if it has the same color
+		if (m_arrBoard[row][col] != color)
+			return 0;
+		int nCount = 1;
+		m_arrBoard[row][col] = 0;
+		//  If we weren't told to not go back up, check up
+		if (direction != DIRECTION_UP)
+			nCount +=
+			DeleteNeighborBlocks(row - 1, col, color, DIRECTION_DOWN);
+		//  If we weren't told to not go back down, check down
+		if (direction != DIRECTION_DOWN)
+			nCount +=
+			DeleteNeighborBlocks(row + 1, col, color, DIRECTION_UP);
+		//  If we weren't told to not go back left, check left
+		if (direction != DIRECTION_LEFT)
+			nCount +=
+			DeleteNeighborBlocks(row, col - 1, color, DIRECTION_RIGHT);
+		//  If we weren't told to not go back right, check right
+		if (direction != DIRECTION_RIGHT)
+			nCount +=
+			DeleteNeighborBlocks(row, col + 1, color, DIRECTION_LEFT);
+		//  Return the total number of pieces deleted
+		return nCount;
+	}
 };

@@ -290,7 +290,29 @@ void CColorMatchView::OnUpdateLevel7colors(CCmdUI *pCmdUI)
 
 void CColorMatchView::OnSetupBlockcount()
 {
-	// TODO: Add your command handler code here
+	//  First get a pointer to the document
+	CColorMatchDoc* pDoc = GetDocument();
+	ASSERT_VALID(pDoc);
+	if (!pDoc)
+		return;
+	//  Create the options dialog
+	COptionsDialog dlg(true, this);
+	//  Set the row and column values
+	dlg.m_nValue1 = pDoc->GetRows();
+	dlg.m_nValue2 = pDoc->GetColumns();
+	//  Display the dialog
+	if (dlg.DoModal() == IDOK)
+	{
+		//  First delete the board
+		pDoc->DeleteBoard();
+		//  Get the user selected values
+		pDoc->SetRows(dlg.m_nValue1);
+		pDoc->SetColumns(dlg.m_nValue2);
+		//  Update the board
+		pDoc->SetupBoard();
+		//  Resize the view
+		ResizeWindow();
+	}
 }
 
 

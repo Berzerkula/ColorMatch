@@ -150,6 +150,20 @@ BEGIN
     DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
 END
 
+IDD_DIALOG_OPTIONS DIALOGEX 0, 0, 198, 97
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,131,16,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,131,35,50,14
+    PUSHBUTTON      "Defaults",IDC_BUTTON_DEFAULTS,131,54,50,14
+    EDITTEXT        IDC_EDIT_VALUE_1,76,17,40,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VALUE_2,76,36,40,13,ES_AUTOHSCROLL
+    LTEXT           "Static",IDC_STATIC_TEXT_1,22,18,41,14
+    LTEXT           "Static",IDC_STATIC_STATIC_TEXT2,23,37,41,13
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -205,8 +219,27 @@ BEGIN
         TOPMARGIN, 7
         BOTTOMMARGIN, 55
     END
+
+    IDD_DIALOG_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 191
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
 END
 #endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_DIALOG_OPTIONS AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
 
 
 /////////////////////////////////////////////////////////////////////////////

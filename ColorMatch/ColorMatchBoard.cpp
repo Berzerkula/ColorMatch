@@ -1,6 +1,8 @@
 #include "StdAfx.h"
 #include "ColorMatchBoard.h"
 
+COLORREF CColorMatchBoard::m_arrColors[8];
+
 CColorMatchBoard::CColorMatchBoard(void)
 	: m_arrBoard(NULL),
 	m_nColumns(15), m_nRows(15),

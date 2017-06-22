@@ -185,4 +185,32 @@ private:
 			}
 		}
 	}
+
+	bool CColorMatchBoard::IsGameOver(void) const
+	{
+		//  Go column by column, left to right
+		for (int col = 0; col < m_nColumns; col++)
+		{
+			//  Row by row, bottom to top
+			for (int row = m_nRows - 1; row >= 0; row--)
+			{
+				int nColor = m_arrBoard[row][col];
+				//  Once we hit background, this column is done
+				if (nColor == 0)
+					break;
+				else
+				{
+					//  Check above and right
+					if (row - 1 >= 0 &&
+						m_arrBoard[row - 1][col] == nColor)
+						return false;
+					else if (col + 1 < m_nColumns &&
+						m_arrBoard[row][col + 1] == nColor)
+						return false;
+				}
+			}
+		}
+		//  No two found adjacent
+		return true;
+	}
 };

@@ -58,7 +58,22 @@ BOOL COptionsDialog::OnInitDialog()
 {
 	CDialog::OnInitDialog();
 
-	// TODO:  Add extra initialization here
+	if (m_bRowColumnDialog)
+	{
+		//  First update the title of the dialog
+		SetWindowText(_T("Update Block Count"));
+		//  Next change the static text labels
+		m_ctrlStaticText1.SetWindowText(_T("Rows"));
+		m_ctrlStaticText2.SetWindowText(_T("Columns"));
+	}
+	else
+	{
+		//  First update the title of the dialog
+		SetWindowText(_T("Update Block Size"));
+		//  Next change the static text labels
+		m_ctrlStaticText1.SetWindowText(_T("Block Width"));
+		m_ctrlStaticText2.SetWindowText(_T("Block Height"));
+	}
 
 	return TRUE;  // return TRUE unless you set the focus to a control
 				  // EXCEPTION: OCX Property Pages should return FALSE

@@ -149,7 +149,34 @@ void CColorMatchView::ResizeWindow()
 
 void CColorMatchView::OnLButtonDown(UINT nFlags, CPoint point)
 {
-	// TODO: Add your message handler code here and/or call default
-
+	//  First get a pointer to the document
+	CSameGameDoc* pDoc = GetDocument();
+	ASSERT_VALID(pDoc);
+	if (!pDoc)
+		return;
+	//  Get the row and column of the block that was clicked on
+	int row = point.y / pDoc->GetHeight();
+	int col = point.x / pDoc->GetWidth();
+	//  Delete the blocks from the document
+	int count = pDoc->DeleteBlocks(row, col);
+	//  Check if there were any blocks deleted
+	if (count > 0)
+	{
+		//  Force the view to redraw
+		Invalidate();
+		UpdateWindow();
+		//  Check if the game is over
+		if (pDoc->IsGameOver())
+		{
+			//  Get the count remaining
+			int remaining = pDoc->GetRemainingCount();
+			CString message;
+			message.Format(_T("No more moves left\nBlocks remaining: %d"),
+				remaining);
+			//  Display the results to the user
+			MessageBox(message, _T("Game Over"), MB_OK | MB_ICONINFORMATION);
+		}
+	}
+	//  Default OnLButtonDown
 	CView::OnLButtonDown(nFlags, point);
 }

@@ -79,3 +79,11 @@ CColorMatchDoc* CColorMatchView::GetDocument() const // non-debug version is inl
 
 
 // CColorMatchView message handlers
+
+
+void CColorMatchView::OnInitialUpdate()
+{
+	CView::OnInitialUpdate();
+
+	// TODO: Add your specialized code here and/or call the base class
+}

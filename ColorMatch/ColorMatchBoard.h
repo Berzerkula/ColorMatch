@@ -34,14 +34,10 @@ public:
 	int GetRemainingCount(void) const { return m_nRemaining; }
 	/*  Function to delete all adjacent blocks */
 	int DeleteBlocks(int row, int col);
-
 	/*  Functions to get and set the number of colors */
 	int GetNumColors(void) { return m_nColors; }
 	void SetNumColors(int nColors)
-	{
-		m_nColors = (nColors >= 3 && nColors <= 7) ? nColors : m_nColors;
-	}
-
+	{ m_nColors = (nColors >= 3 && nColors <= 7) ? nColors : m_nColors;	}
 private:
 	/*  Function to create the board and allocate memory */
 	void CreateBoard(void);

@@ -61,6 +61,13 @@ public:
 
 	afx_msg void OnSetupBlockcount();
 	afx_msg void OnSetupBlocksize();
+
+	/* Functions for undo/redo */
+	afx_msg void OnEditRedo();
+	afx_msg void OnUpdateEditRedo(CCmdUI *pCmdUI);
+	/* Functions to update the undo/redo menu options */
+	afx_msg void OnEditUndo();
+	afx_msg void OnUpdateEditUndo(CCmdUI *pCmdUI);
 };
 
 #ifndef _DEBUG  // debug version in ColorMatchView.cpp

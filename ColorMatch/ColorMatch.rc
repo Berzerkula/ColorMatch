@@ -88,7 +88,7 @@ BEGIN
     END
     POPUP "&Edit"
     BEGIN
-        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO32771
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
         MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
     END
     POPUP "&Level"

@@ -36,6 +36,10 @@ BEGIN_MESSAGE_MAP(CColorMatchView, CView)
 	ON_UPDATE_COMMAND_UI(ID_LEVEL_7COLORS, &CColorMatchView::OnUpdateLevel7colors)
 	ON_COMMAND(ID_SETUP_BLOCKCOUNT, &CColorMatchView::OnSetupBlockcount)
 	ON_COMMAND(ID_SETUP_BLOCKSIZE, &CColorMatchView::OnSetupBlocksize)
+	ON_COMMAND(ID_EDIT_REDO, &CColorMatchView::OnEditRedo)
+	ON_UPDATE_COMMAND_UI(ID_EDIT_REDO, &CColorMatchView::OnUpdateEditRedo)
+	ON_COMMAND(ID_EDIT_UNDO, &CColorMatchView::OnEditUndo)
+	ON_UPDATE_COMMAND_UI(ID_EDIT_UNDO, &CColorMatchView::OnUpdateEditUndo)
 END_MESSAGE_MAP()
 
 // CColorMatchView construction/destruction
@@ -341,4 +345,28 @@ void CColorMatchView::OnSetupBlocksize()
 		//  Resize the view
 		ResizeWindow();
 	}
+}
+
+
+void CColorMatchView::OnEditRedo()
+{
+	// TODO: Add your command handler code here
+}
+
+
+void CColorMatchView::OnUpdateEditRedo(CCmdUI *pCmdUI)
+{
+	// TODO: Add your command update UI handler code here
+}
+
+
+void CColorMatchView::OnEditUndo()
+{
+	// TODO: Add your command handler code here
+}
+
+
+void CColorMatchView::OnUpdateEditUndo(CCmdUI *pCmdUI)
+{
+	// TODO: Add your command update UI handler code here
 }

@@ -17,6 +17,28 @@ CColorMatchBoard::CColorMatchBoard(void)
 	m_arrColors[7] = RGB(0, 64, 0);
 }
 
+CColorMatchBoard::CColorMatchBoard(const CColorMatchBoard& board)
+{
+	//  Copy all of the regular data members
+	m_nColumns = board.m_nColumns;
+	m_nRows = board.m_nRows;
+	m_nHeight = board.m_nHeight;
+	m_nWidth = board.m_nWidth;
+	m_nRemaining = board.m_nRemaining;
+	m_nColors = board.m_nColors;
+	// Copy ove the colors for the board
+	for (int i = 0; i < 8; i++)
+		m_arrColors[i] = board.m_arrColors[i];
+	m_arrBoard = NULL;
+
+	//  Create a new game board of the same size
+	CreateBoard();
+	//  Copy the contents of the game board
+	for (int row = 0; row < m_nRows; row++)
+		for (int col = 0; col < m_nColumns; col++)
+			m_arrBoard[row][col] = board.m_arrBoard[row][col];
+}
+
 CColorMatchBoard::~CColorMatchBoard(void)
 {
 	//  Simply delete the board

@@ -125,4 +125,64 @@ private:
 		//  Return the total number of pieces deleted
 		return nCount;
 	}
+
+	void CColorMatchBoard::CompactBoard(void)
+	{
+		//  First move everything down
+		for (int col = 0; col < m_nColumns; col++)
+		{
+			int nNextEmptyRow = m_nRows - 1;
+			int nNextOccupiedRow = nNextEmptyRow;
+			while (nNextOccupiedRow >= 0 && nNextEmptyRow >= 0)
+			{
+				//  First find the next empty row
+				while (nNextEmptyRow >= 0 &&
+					m_arrBoard[nNextEmptyRow][col] != 0)
+					nNextEmptyRow--;
+				if (nNextEmptyRow >= 0)
+				{
+					//  Then find the next occupied row from the next empty row
+					nNextOccupiedRow = nNextEmptyRow - 1;
+					while (nNextOccupiedRow >= 0 &&
+						m_arrBoard[nNextOccupiedRow][col] == 0)
+						nNextOccupiedRow--;
+					if (nNextOccupiedRow >= 0)
+					{
+						//  Now move the block from occupied to empty
+						m_arrBoard[nNextEmptyRow][col] =
+							m_arrBoard[nNextOccupiedRow][col];
+						m_arrBoard[nNextOccupiedRow][col] = 0;
+					}
+				}
+			}
+		}
+		//  Then move everything from right to left
+		int nNextEmptyCol = 0;
+		int nNextOccupiedCol = nNextEmptyCol;
+		while (nNextEmptyCol < m_nColumns && nNextOccupiedCol < m_nColumns)
+		{
+			//  First find the next empty column
+			while (nNextEmptyCol < m_nColumns &&
+				m_arrBoard[m_nRows - 1][nNextEmptyCol] != 0)
+				nNextEmptyCol++;
+			if (nNextEmptyCol < m_nColumns)
+			{
+				//  Then find the next column with something in it
+				nNextOccupiedCol = nNextEmptyCol + 1;
+				while (nNextOccupiedCol < m_nColumns &&
+					m_arrBoard[m_nRows - 1][nNextOccupiedCol] == 0)
+					nNextOccupiedCol++;
+				if (nNextOccupiedCol < m_nColumns)
+				{
+					//  Move entire column to the left
+					for (int row = 0; row < m_nRows; row++)
+					{
+						m_arrBoard[row][nNextEmptyCol] =
+							m_arrBoard[row][nNextOccupiedCol];
+						m_arrBoard[row][nNextOccupiedCol] = 0;
+					}
+				}
+			}
+		}
+	}
 };

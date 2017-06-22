@@ -26,6 +26,9 @@ protected:
 
 // Implementation
 public:
+
+	void ResizeWindow();
+
 	virtual ~CColorMatchView();
 #ifdef _DEBUG
 	virtual void AssertValid() const;

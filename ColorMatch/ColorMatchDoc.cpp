@@ -64,9 +64,9 @@ BOOL CColorMatchDoc::OnNewDocument()
 void CColorMatchDoc::SetNumColors(int nColors)
 {
 	//  Set the number of colors first
-	m_board.SetNumColors(nColors);
+	m_board->SetNumColors(nColors);
 	//  Then reset the game board
-	m_board.SetupBoard();
+	m_board->SetupBoard();
 }
 
 int CSameGameDoc::DeleteBlocks(int row, int col)

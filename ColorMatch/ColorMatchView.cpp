@@ -23,6 +23,10 @@ IMPLEMENT_DYNCREATE(CColorMatchView, CView)
 
 BEGIN_MESSAGE_MAP(CColorMatchView, CView)
 	ON_WM_LBUTTONDOWN()
+	ON_COMMAND(ID_LEVEL_3COLORS, &CColorMatchView::OnLevel3colors)
+	ON_UPDATE_COMMAND_UI(ID_LEVEL_3COLORS, &CColorMatchView::OnUpdateLevel3colors)
+	ON_COMMAND(ID_LEVEL_4COLORS, &CColorMatchView::OnLevel4colors)
+	ON_UPDATE_COMMAND_UI(ID_LEVEL_4COLORS, &CColorMatchView::OnUpdateLevel4colors)
 END_MESSAGE_MAP()
 
 // CColorMatchView construction/destruction
@@ -179,4 +183,62 @@ void CColorMatchView::OnLButtonDown(UINT nFlags, CPoint point)
 	}
 	//  Default OnLButtonDown
 	CView::OnLButtonDown(nFlags, point);
+}
+
+
+void CColorMatchView::OnLevel3colors()
+{
+	// TODO: Add your command handler code here
+}
+
+
+void CColorMatchView::OnUpdateLevel3colors(CCmdUI *pCmdUI)
+{
+	// TODO: Add your command update UI handler code here
+}
+
+
+void CColorMatchView::OnLevel4colors()
+{
+	// TODO: Add your command handler code here
+}
+
+
+void CColorMatchView::OnUpdateLevel4colors(CCmdUI *pCmdUI)
+{
+	// TODO: Add your command update UI handler code here
+}
+
+void CColorMatchView::OnLevel5colors()
+{
+	// TODO: Add your command handler code here
+}
+
+
+void CColorMatchView::OnUpdateLevel5colors(CCmdUI *pCmdUI)
+{
+	// TODO: Add your command update UI handler code here
+}
+
+
+void CColorMatchView::OnLevel6colors()
+{
+	// TODO: Add your command handler code here
+}
+
+
+void CColorMatchView::OnUpdateLevel6colors(CCmdUI *pCmdUI)
+{
+	// TODO: Add your command update UI handler code here
+}
+
+void CColorMatchView::OnLevel7colors()
+{
+	// TODO: Add your command handler code here
+}
+
+
+void CColorMatchView::OnUpdateLevel7colors(CCmdUI *pCmdUI)
+{
+	// TODO: Add your command update UI handler code here
 }

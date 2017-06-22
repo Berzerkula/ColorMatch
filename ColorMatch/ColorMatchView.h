@@ -43,15 +43,19 @@ protected:
 public:
 	virtual void OnInitialUpdate();
 	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
+
+	/* Functions to change the difficulty level */
 	afx_msg void OnLevel3colors();
-	afx_msg void OnUpdateLevel3colors(CCmdUI *pCmdUI);
 	afx_msg void OnLevel4colors();
-	afx_msg void OnUpdateLevel4colors(CCmdUI *pCmdUI);
 	afx_msg void OnLevel5colors();
-	afx_msg void OnUpdateLevel5colors(CCmdUI *pCmdUI);
 	afx_msg void OnLevel6colors();
-	afx_msg void OnUpdateLevel6colors(CCmdUI *pCmdUI);
 	afx_msg void OnLevel7colors();
+
+	/* Functions to update the menu options */
+	afx_msg void OnUpdateLevel3colors(CCmdUI *pCmdUI);
+	afx_msg void OnUpdateLevel4colors(CCmdUI *pCmdUI);
+	afx_msg void OnUpdateLevel5colors(CCmdUI *pCmdUI);
+	afx_msg void OnUpdateLevel6colors(CCmdUI *pCmdUI);
 	afx_msg void OnUpdateLevel7colors(CCmdUI *pCmdUI);
 };
 

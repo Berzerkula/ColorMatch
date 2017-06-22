@@ -5,6 +5,8 @@ class CColorMatchBoard
 public:
 	/*  Default Constructor */
 	CColorMatchBoard(void);
+	/* Copy Constructor */
+	CColorMatchBoard(const CColorMatchBoard& board);
 	/*  Destructor */
 	~CColorMatchBoard(void);
 	/*  Function to randomly setup the board */

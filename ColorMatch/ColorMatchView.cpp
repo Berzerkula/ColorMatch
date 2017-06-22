@@ -33,6 +33,8 @@ BEGIN_MESSAGE_MAP(CColorMatchView, CView)
 	ON_UPDATE_COMMAND_UI(ID_LEVEL_5COLORS, &CColorMatchView::OnUpdateLevel5colors)
 	ON_UPDATE_COMMAND_UI(ID_LEVEL_6COLORS, &CColorMatchView::OnUpdateLevel6colors)
 	ON_UPDATE_COMMAND_UI(ID_LEVEL_7COLORS, &CColorMatchView::OnUpdateLevel7colors)
+	ON_COMMAND(ID_SETUP_BLOCKCOUNT, &CColorMatchView::OnSetupBlockcount)
+	ON_COMMAND(ID_SETUP_BLOCKSIZE, &CColorMatchView::OnSetupBlocksize)
 END_MESSAGE_MAP()
 
 // CColorMatchView construction/destruction
@@ -283,4 +285,15 @@ void CColorMatchView::OnUpdateLevel7colors(CCmdUI *pCmdUI)
 		return;
 	//  Set the check if this is the right level
 	pCmdUI->SetCheck(pDoc->GetNumColors() == 7);
+}
+
+void CColorMatchView::OnSetupBlockcount()
+{
+	// TODO: Add your command handler code here
+}
+
+
+void CColorMatchView::OnSetupBlocksize()
+{
+	// TODO: Add your command handler code here
 }

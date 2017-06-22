@@ -58,6 +58,8 @@ public:
 	afx_msg void OnUpdateLevel5colors(CCmdUI *pCmdUI);
 	afx_msg void OnUpdateLevel6colors(CCmdUI *pCmdUI);
 	afx_msg void OnUpdateLevel7colors(CCmdUI *pCmdUI);
+	afx_msg void OnSetupBlockcount();
+	afx_msg void OnSetupBlocksize();
 };
 
 #ifndef _DEBUG  // debug version in ColorMatchView.cpp

@@ -28,6 +28,8 @@ void CColorMatchBoard::SetupBoard(void)
 	for (int row = 0; row < m_nRows; row++)
 		for (int col = 0; col < m_nColumns; col++)
 			m_arrBoard[row][col] = (rand() % 3) + 1;
+	//  Set the number of spaces remaining
+	m_nRemaining = m_nRows * m_nColumns;
 }
 
 COLORREF CColorMatchBoard::GetBoardSpace(int row, int col)

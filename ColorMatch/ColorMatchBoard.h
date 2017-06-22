@@ -13,9 +13,17 @@ public:
 	COLORREF GetBoardSpace(int row, int col);
 	/*  Accessor functions to get board size information */
 	int GetWidth(void) const { return m_nWidth; }
+	void SetWidth(int nWidth)
+	{ m_nWidth = (nWidth >= 3) ? nWidth : 3; }
 	int GetHeight(void) const { return m_nHeight; }
+	void Setheight(int nHeight)
+	{ m_nHeight = (nHeight >= 3) ? nHeight : 3; }
 	int GetColumns(void) const { return m_nColumns; }
+	void SetColumns(int nColumns)
+	{ m_nColumns = (nColumns >= 5) ? nColumns : 5; }
 	int GetRows(void) const { return m_nRows; }
+	void SetRows(int nRows)
+	{ m_nRows = (nRows >= 5) ? nRows : 5; }
 	/*  Function to delete the board and free memory */
 	void DeleteBoard(void);
 

@@ -69,10 +69,10 @@ void CColorMatchDoc::SetNumColors(int nColors)
 	m_board->SetupBoard();
 }
 
-int CSameGameDoc::DeleteBlocks(int row, int col)
+int CColorMatchDoc::DeleteBlocks(int row, int col)
 {
 	//  Save the current board in the undo stack
-	m_undo.push(new CSameGameBoard(*m_board));
+	m_undo.push(new CColorMatchBoard(*m_board));
 	//  Empty out the redo stack
 	ClearRedo();
 	//  Then delete the blocks
@@ -84,7 +84,7 @@ int CSameGameDoc::DeleteBlocks(int row, int col)
 	return blocks;
 }
 
-void CSameGameDoc::UndoLast()
+void CColorMatchDoc::UndoLast()
 {
 	//  First make sure that there is a move to undo
 	if (m_undo.empty())
@@ -96,13 +96,13 @@ void CSameGameDoc::UndoLast()
 	m_undo.pop();
 }
 
-bool CSameGameDoc::CanUndo()
+bool CColorMatchDoc::CanUndo()
 {
 	//  Can undo if the undo stack isn't empty
 	return !m_undo.empty();
 }
 
-void CSameGameDoc::RedoLast()
+void CColorMatchDoc::RedoLast()
 {
 	//  First make sure that there is a move to redo
 	if (m_redo.empty())
@@ -114,13 +114,13 @@ void CSameGameDoc::RedoLast()
 	m_redo.pop();
 }
 
-bool CSameGameDoc::CanRedo()
+bool CColorMatchDoc::CanRedo()
 {
 	//  Can redo if the redo stack isn't empty
 	return !m_redo.empty();
 }
 
-void CSameGameDoc::ClearUndo()
+void CColorMatchDoc::ClearUndo()
 {
 	//  Delete everything from the undo stack
 	while (!m_undo.empty())
@@ -130,7 +130,7 @@ void CSameGameDoc::ClearUndo()
 	}
 }
 
-void CSameGameDoc::ClearRedo()
+void CColorMatchDoc::ClearRedo()
 {
 	//  Delete everything from the redo stack
 	while (!m_redo.empty())

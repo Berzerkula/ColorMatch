@@ -23,21 +23,21 @@ public:
 	/*  Functions for accessing the game board */
 	COLORREF GetBoardSpace(int row, int col)
 	{ return m_board->GetBoardSpace(row, col); }
-	void SetupBoard(void) { m_board.SetupBoard(); }
-	int GetWidth(void) { return m_board.GetWidth(); }
-	void SetWidth(int nWidth) { m_board.SetWidth(nWidth); }
-	int GetHeight(void) { return m_board.GetHeight(); }
-	void SetHeight(int nHeight) { m_board.Setheight(nHeight); }
-	int GetColumns(void) { return m_board.GetColumns(); }
-	void SetColumns(int nColumns) { m_board.SetColumns(nColumns); }
-	int GetRows(void) { return m_board.GetRows(); }
-	void SetRows(int nRows) { m_board.SetRows(nRows); }
-	void DeleteBoard(void) { m_board.DeleteBoard(); }
-	bool IsGameOver() { return m_board.IsGameOver(); }
+	void SetupBoard(void) { m_board->SetupBoard(); }
+	int GetWidth(void) { return m_board->GetWidth(); }
+	void SetWidth(int nWidth) { m_board->SetWidth(nWidth); }
+	int GetHeight(void) { return m_board->GetHeight(); }
+	void SetHeight(int nHeight) { m_board->Setheight(nHeight); }
+	int GetColumns(void) { return m_board->GetColumns(); }
+	void SetColumns(int nColumns) { m_board->SetColumns(nColumns); }
+	int GetRows(void) { return m_board->GetRows(); }
+	void SetRows(int nRows) { m_board->SetRows(nRows); }
+	void DeleteBoard(void) { m_board->DeleteBoard(); }
+	bool IsGameOver() { return m_board->IsGameOver(); }
 	int DeleteBlocks(int row, int col);
 	int GetRemainingCount()
-	{ return m_board.GetRemainingCount(); }
-	int GetNumColors() { return m_board.GetNumColors(); }
+	{ return m_board->GetRemainingCount(); }
+	int GetNumColors() { return m_board->GetNumColors(); }
 	void SetNumColors(int nColors);
 	/* Undo/Redo functions */
 	void UndoLast();
@@ -67,7 +67,7 @@ protected:
 	void ClearUndo();
 	void ClearRedo();
 	/*  Instance of the game board */
-	CColorMatchBoard m_board;
+	CColorMatchBoard* m_board;
 	/*  Undo stack */
 	std::stack<CColorMatchBoard*> m_undo;
 	/*  Redo stack */

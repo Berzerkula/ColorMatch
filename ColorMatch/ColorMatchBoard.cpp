@@ -9,14 +9,14 @@ CColorMatchBoard::CColorMatchBoard(void)
 	m_nHeight(35), m_nWidth(35),
 	m_nRemaining(0)
 {
-	m_arrColors[0] = RGB(0, 0, 0);
-	m_arrColors[1] = RGB(255, 0, 0);
-	m_arrColors[2] = RGB(255, 255, 64);
-	m_arrColors[3] = RGB(0, 0, 255);
-	m_arrColors[4] = RGB(0, 255, 0);
-	m_arrColors[5] = RGB(0, 255, 255);
-	m_arrColors[6] = RGB(255, 0, 128);
-	m_arrColors[7] = RGB(0, 64, 0);
+	m_arrColors[0] = RGB(0, 0, 0); //black
+	m_arrColors[1] = RGB(255, 0, 0); //red
+	m_arrColors[2] = RGB(255, 127, 0); //orange
+	m_arrColors[3] = RGB(255, 255, 0); //yellow
+	m_arrColors[4] = RGB(0, 255, 0); //green
+	m_arrColors[5] = RGB(0, 0, 255); //blue
+	m_arrColors[6] = RGB(75, 0, 130); //indigo
+	m_arrColors[7] = RGB(139, 0, 255); // violet
 	// Create and setup the board
 	SetupBoard();
 }

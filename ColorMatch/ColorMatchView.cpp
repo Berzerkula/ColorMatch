@@ -29,11 +29,15 @@ BEGIN_MESSAGE_MAP(CColorMatchView, CView)
 	ON_COMMAND(ID_LEVEL_5COLORS, &CColorMatchView::OnLevel5colors)
 	ON_COMMAND(ID_LEVEL_6COLORS, &CColorMatchView::OnLevel6colors)
 	ON_COMMAND(ID_LEVEL_7COLORS, &CColorMatchView::OnLevel7colors)
+	ON_COMMAND(ID_LEVEL_8COLORS, &CColorMatchView::OnLevel8colors)
+	ON_COMMAND(ID_LEVEL_9COLORS, &CColorMatchView::OnLevel9colors)
 	ON_UPDATE_COMMAND_UI(ID_LEVEL_3COLORS, &CColorMatchView::OnUpdateLevel3colors)
 	ON_UPDATE_COMMAND_UI(ID_LEVEL_4COLORS, &CColorMatchView::OnUpdateLevel4colors)
 	ON_UPDATE_COMMAND_UI(ID_LEVEL_5COLORS, &CColorMatchView::OnUpdateLevel5colors)
 	ON_UPDATE_COMMAND_UI(ID_LEVEL_6COLORS, &CColorMatchView::OnUpdateLevel6colors)
 	ON_UPDATE_COMMAND_UI(ID_LEVEL_7COLORS, &CColorMatchView::OnUpdateLevel7colors)
+	ON_UPDATE_COMMAND_UI(ID_LEVEL_8COLORS, &CColorMatchView::OnUpdateLevel8colors)
+	ON_UPDATE_COMMAND_UI(ID_LEVEL_9COLORS, &CColorMatchView::OnUpdateLevel9colors)
 	ON_COMMAND(ID_SETUP_BLOCKCOUNT, &CColorMatchView::OnSetupBlockcount)
 	ON_COMMAND(ID_SETUP_BLOCKSIZE, &CColorMatchView::OnSetupBlocksize)
 	ON_COMMAND(ID_EDIT_REDO, &CColorMatchView::OnEditRedo)
@@ -237,6 +241,16 @@ void CColorMatchView::OnLevel7colors()
 	setColorCount(7);
 }
 
+void CColorMatchView::OnLevel8colors()
+{
+	setColorCount(8);
+}
+
+void CColorMatchView::OnLevel9colors()
+{
+	setColorCount(9);
+}
+
 void CColorMatchView::OnUpdateLevel3colors(CCmdUI *pCmdUI)
 {
 	//  First get a pointer to the document
@@ -290,6 +304,28 @@ void CColorMatchView::OnUpdateLevel7colors(CCmdUI *pCmdUI)
 		return;
 	//  Set the check if this is the right level
 	pCmdUI->SetCheck(pDoc->GetNumColors() == 7);
+}
+
+void CColorMatchView::OnUpdateLevel8colors(CCmdUI *pCmdUI)
+{
+	//  First get a pointer to the document
+	CColorMatchDoc* pDoc = GetDocument();
+	ASSERT_VALID(pDoc);
+	if (!pDoc)
+		return;
+	//  Set the check if this is the right level
+	pCmdUI->SetCheck(pDoc->GetNumColors() == 8);
+}
+
+void CColorMatchView::OnUpdateLevel9colors(CCmdUI *pCmdUI)
+{
+	//  First get a pointer to the document
+	CColorMatchDoc* pDoc = GetDocument();
+	ASSERT_VALID(pDoc);
+	if (!pDoc)
+		return;
+	//  Set the check if this is the right level
+	pCmdUI->SetCheck(pDoc->GetNumColors() == 9);
 }
 
 void CColorMatchView::OnSetupBlockcount()

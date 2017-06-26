@@ -37,7 +37,7 @@ public:
 	/*  Functions to get and set the number of colors */
 	int GetNumColors(void) { return m_nColors; }
 	void SetNumColors(int nColors)
-	{ m_nColors = (nColors >= 3 && nColors <= 7) ? nColors : m_nColors;	}
+	{ m_nColors = (nColors >= 3 && nColors <= 9) ? nColors : m_nColors;	}
 private:
 	/*  Function to create the board and allocate memory */
 	void CreateBoard(void);
@@ -57,8 +57,8 @@ private:
 	void CompactBoard(void);
 	/*  2D array pointer */
 	int** m_arrBoard;
-	/*  List of colors, 0 is background and 1-7 are piece colors */
-	static COLORREF m_arrColors[8];
+	/*  List of colors, 0 is background and 1-9 are piece colors */
+	static COLORREF m_arrColors[10];
 	/*  Board size information */
 	int m_nColumns;
 	int m_nRows;

@@ -98,6 +98,8 @@ BEGIN
         MENUITEM "&5 Colors",                   ID_LEVEL_5COLORS
         MENUITEM "&6 Colors",                   ID_LEVEL_6COLORS
         MENUITEM "&7 Colors",                   ID_LEVEL_7COLORS
+        MENUITEM "&8 Colors",                   ID_LEVEL_8COLORS
+        MENUITEM "&9 Colors",                   ID_LEVEL_9COLORS
     END
     POPUP "&Setup"
     BEGIN

@@ -51,6 +51,8 @@ public:
 	afx_msg void OnLevel5colors();
 	afx_msg void OnLevel6colors();
 	afx_msg void OnLevel7colors();
+	afx_msg void OnLevel8colors();
+	afx_msg void OnLevel9colors();
 
 	/* Functions to update the menu options */
 	afx_msg void OnUpdateLevel3colors(CCmdUI *pCmdUI);
@@ -58,6 +60,8 @@ public:
 	afx_msg void OnUpdateLevel5colors(CCmdUI *pCmdUI);
 	afx_msg void OnUpdateLevel6colors(CCmdUI *pCmdUI);
 	afx_msg void OnUpdateLevel7colors(CCmdUI *pCmdUI);
+	afx_msg void OnUpdateLevel8colors(CCmdUI *pCmdUI);
+	afx_msg void OnUpdateLevel9colors(CCmdUI *pCmdUI);
 
 	afx_msg void OnSetupBlockcount();
 	afx_msg void OnSetupBlocksize();

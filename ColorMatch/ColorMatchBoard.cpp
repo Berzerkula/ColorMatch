@@ -1,7 +1,7 @@
 #include "StdAfx.h"
 #include "ColorMatchBoard.h"
 
-COLORREF CColorMatchBoard::m_arrColors[8];
+COLORREF CColorMatchBoard::m_arrColors[10];
 
 CColorMatchBoard::CColorMatchBoard(void)
 	: m_arrBoard(NULL),
@@ -17,6 +17,8 @@ CColorMatchBoard::CColorMatchBoard(void)
 	m_arrColors[5] = RGB(0, 0, 255); //blue
 	m_arrColors[6] = RGB(75, 0, 130); //indigo
 	m_arrColors[7] = RGB(139, 0, 255); // violet
+	m_arrColors[8] = RGB(255, 192, 203); // pink
+	m_arrColors[9] = RGB(0, 255, 255); // cyan
 	// Create and setup the board
 	SetupBoard();
 }
@@ -31,7 +33,7 @@ CColorMatchBoard::CColorMatchBoard(const CColorMatchBoard& board)
 	m_nRemaining = board.m_nRemaining;
 	m_nColors = board.m_nColors;
 	// Copy ove the colors for the board
-	for (int i = 0; i < 8; i++)
+	for (int i = 0; i < 10; i++)
 		m_arrColors[i] = board.m_arrColors[i];
 	m_arrBoard = NULL;
 
